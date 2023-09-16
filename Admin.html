@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <div class="form">
+      <form class="login-form" action="" method="post" onsubmit="return checkCredentials()">
+        <i class="fas fa-user-circle"></i>
+        <input class="user-input" type="text" name="username" placeholder="Username" required>
+        <input class="user-input" type="password" name="password" placeholder="Password" required>
+        <div class="options-01">
+          <label class="remember-me"><input type="checkbox" name="">Remember me</label>
+        </div>
+        <input class="btn" type="submit" name="" value="LOGIN">
+        </div>
+      </form>
+    </div>
+
+    <script type="text/javascript">
+
+function checkCredentials() {
+    var username = document.querySelector('.login-form input[name="username"]').value;
+    var password = document.querySelector('.login-form input[name="password"]').value;
+
+    if (username === 'admin' && password === 'password') {
+      window.location.href = 'CertificateGeneratorPage0131213204309192349043.html';
+      return false; // submission preventing
+    } else {
+      alert('Invalid credentials. Please try again.');
+      return false; 
+    }
+  }
+
+    $('.options-02 a').click(function(){
+      $('form').animate({
+        height: "toggle", opacity: "toggle"
+      }, "slow");
+    });
+    </script>
+
+  </body>
+</html>
+      
